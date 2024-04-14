@@ -10,3 +10,6 @@ def length_three_cycle(adj_matrix):
             for j in range(mid, end - 1):
                 if adj_matrix[i][j] == 1 and adj_matrix[j][i] == 1:
                     return 'YES'
+                
+        left_result = divide_and_conquer(start, mid)
+        right_result = divide_and_conquer(mid, end)
